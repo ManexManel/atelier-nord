@@ -1,0 +1,83 @@
+================================================================================
+ATELIER NORD — QUICK DEPLOYMENT GUIDE
+================================================================================
+
+⚡ 3 STEPS TO LIVE = 10 MINUTES
+
+================================================================================
+STEP 1: GIT INIT & COMMIT
+================================================================================
+
+Open Terminal/CMD in your project folder and run:
+
+    cd landing-agence
+    git init
+    git add .
+    git commit -m "init: Atelier Nord v1"
+
+Result: Files staged for GitHub
+
+================================================================================
+STEP 2: PUSH TO GITHUB
+================================================================================
+
+FIRST: Create a NEW repo on GitHub
+  1. Go to github.com/new
+  2. Name: "atelier-nord"
+  3. Public
+  4. Click "Create repository"
+
+THEN: Copy the commands from GitHub and run them.
+Example (REPLACE YOUR_USERNAME):
+
+    git remote add origin https://github.com/YOUR_USERNAME/atelier-nord.git
+    git branch -M main
+    git push -u origin main
+
+Result: Your code on GitHub at https://github.com/YOUR_USERNAME/atelier-nord
+
+================================================================================
+STEP 3: DEPLOY TO VERCEL
+================================================================================
+
+1. Visit: https://vercel.com
+2. Click "New Project"
+3. Select your "atelier-nord" repo
+4. Click "Deploy"
+5. Wait 1-2 minutes...
+
+DONE! Your site is live at: https://atelier-nord-XXXX.vercel.app
+
+================================================================================
+STEP 4: TEST SEO PREVIEW (OPTIONAL)
+================================================================================
+
+Go to: https://metatags.io
+
+Paste your Vercel URL:
+    https://metatags.io?url=https://atelier-nord-XXXX.vercel.app
+
+Check:
+    ✓ Google preview shows title
+    ✓ LinkedIn shows image
+    ✓ Twitter/X shows description
+    ✓ Favicon visible in tab
+
+================================================================================
+✅ YOU'RE LIVE!
+================================================================================
+
+Next steps:
+- [ ] Add custom domain (Vercel dashboard → Settings)
+- [ ] Enable Speed Insights (Vercel dashboard → Settings)
+- [ ] Custom branding (replace "Atelier Nord" references)
+
+Questions?
+- README.md — Overview
+- SETUP.md — Customization guide
+- DEPLOYMENT_CHECKLIST.md — Detailed steps
+- NEXT_STEPS.md — Quick reference
+
+Happy launching! 🚀
+
+================================================================================

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO fondamental -->
+  <title>Atelier Nord — Marketing B2B | Leads qualifiés pour agences</title>
+  <meta name="description" content="Atelier Nord accompagne les agences marketing françaises pour scaler leur acquisition B2B. Leads qualifiés, appel stratégique offert. Résultats sous 90 jours." />
+  <meta name="keywords" content="agence marketing b2b, lead generation agence, acquisition b2b france, growth b2b" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Atelier Nord" />
+  <link rel="canonical" href="https://ateliernord.fr/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta property="og:url"         content="https://ateliernord.fr/" />
+  <meta property="og:title"       content="Atelier Nord — Marketing B2B | Leads qualifiés pour agences" />
+  <meta property="og:description" content="Atelier Nord accompagne les agences marketing françaises pour scaler leur acquisition B2B. Leads qualifiés, appel stratégique offert. Résultats sous 90 jours." />
+  <meta property="og:image"       content="https://ateliernord.fr/assets/og-image.svg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="Atelier Nord — Acquisition B2B pour agences marketing françaises" />
+  <meta property="og:site_name"   content="Atelier Nord" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Atelier Nord — Marketing B2B | Leads qualifiés pour agences" />
+  <meta name="twitter:description" content="Atelier Nord accompagne les agences marketing françaises pour scaler leur acquisition B2B. Leads qualifiés, appel stratégique offert. Résultats sous 90 jours." />
+  <meta name="twitter:image"       content="https://ateliernord.fr/assets/og-image.svg" />
+  <meta name="twitter:image:alt"   content="Atelier Nord — Acquisition B2B pour agences marketing françaises" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Atelier Nord",
+    "description": "Accompagnement stratégique en acquisition B2B pour agences marketing françaises de 10 à 50 personnes.",
+    "url": "https://ateliernord.fr",
+    "priceRange": "€€€",
+    "serviceType": ["Marketing B2B", "Lead Generation", "Acquisition B2B"],
+    "areaServed": {
+      "@type": "Country",
+      "name": "France"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Paris",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "availableLanguage": "French"
+    }
+  }
+  </script>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+
+  <!-- Elite Fonts (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:      '#0A0A0A',
+            surface: '#141414',
+            text:    '#F5F5F5',
+            muted:   '#A0A0A0',
+            accent:  '#C9A961',
+          },
+          fontFamily: {
+            sans: ['Satoshi', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-bg text-text font-sans antialiased">
+
+  <!-- Background Glow Spheres (Vantablack + Gold) -->
+  <div class="bg-glow-sphere" style="top: 10%; left: 5%;"></div>
+  <div class="bg-glow-sphere" style="top: 50%; right: 10%;"></div>
+  <div class="bg-glow-sphere" style="bottom: 20%; left: 20%;"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header id="main-nav" class="nav-header fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#hero" class="text-text font-bold text-xl tracking-tight hover:text-accent transition-colors duration-200">
+        Atelier Nord
+      </a>
+
+      <!-- Desktop nav links -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Navigation principale">
+        <a href="#methode"     class="nav-link text-muted text-sm font-medium hover:text-text transition-colors duration-200">Méthode</a>
+        <a href="#temoignages" class="nav-link text-muted text-sm font-medium hover:text-text transition-colors duration-200">Témoignages</a>
+        <a href="#faq"         class="nav-link text-muted text-sm font-medium hover:text-text transition-colors duration-200">FAQ</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <button
+        class="cta-btn hidden md:block bg-accent text-bg text-sm font-bold px-5 py-2.5 rounded hover:opacity-90 transition-opacity duration-200"
+        aria-haspopup="dialog"
+      >
+        Réserver un appel
+      </button>
+
+      <!-- Burger button (mobile) -->
+      <button
+        id="burger-btn"
+        class="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span class="burger-bar block w-6 h-0.5 bg-text transition-all duration-200"></span>
+        <span class="burger-bar block w-6 h-0.5 bg-text transition-all duration-200"></span>
+        <span class="burger-bar block w-6 h-0.5 bg-text transition-all duration-200"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div
+    id="mobile-nav"
+    class="mobile-nav fixed inset-0 z-40 bg-bg flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Menu mobile"
+  >
+    <a href="#methode"     class="mobile-nav-link text-text text-2xl font-medium hover:text-accent transition-colors duration-200">Méthode</a>
+    <a href="#temoignages" class="mobile-nav-link text-text text-2xl font-medium hover:text-accent transition-colors duration-200">Témoignages</a>
+    <a href="#faq"         class="mobile-nav-link text-text text-2xl font-medium hover:text-accent transition-colors duration-200">FAQ</a>
+    <button
+      class="cta-btn mt-4 bg-accent text-bg text-base font-bold px-8 py-3 rounded hover:opacity-90 transition-opacity duration-200"
+      aria-haspopup="dialog"
+    >
+      Réserver un appel
+    </button>
+  </div>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <main>
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-16 relative overflow-hidden">
+
+      <!-- Hero background image -->
+      <img src="assets/hero-bg.png" alt="Atelier Nord" class="absolute inset-0 w-full h-full object-cover z-0 opacity-30">
+
+      <!-- Halo radial animé -->
+      <div class="hero-halo absolute inset-0 z-0 pointer-events-none" aria-hidden="true"></div>
+
+      <!-- Overlay sombre pour contraste (renforcé pour premium) -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/45 to-black/60 z-0 pointer-events-none" aria-hidden="true"></div>
+
+      <!-- Contenu (au-dessus du background) -->
+      <div class="max-w-3xl mx-auto text-center relative z-10">
+
+        <!-- Eyebrow badge -->
+        <p class="inline-block text-accent text-xs font-medium tracking-widest uppercase mb-6 px-3 py-1 border border-accent/30 rounded-full">
+          Accompagnement B2B · Agences marketing
+        </p>
+
+        <!-- H1 — Elite Spacing avec Serif Accents (Awwwards) -->
+        <h1 class="stagger-h1">
+          Vos&nbsp;<span class="serif-italic-gold">clients&nbsp;idéaux</span>.<br>
+          En&nbsp;<span class="serif-italic-gold">90&nbsp;jours</span>.<br>
+          Sans&nbsp;recruter.
+        </h1>
+
+        <!-- Sous-titre -->
+        <p class="text-muted text-lg sm:text-xl font-normal max-w-xl mx-auto mb-10 leading-relaxed">
+          Accompagnement stratégique pour agences marketing françaises
+          qui veulent scaler leur acquisition B2B.
+        </p>
+
+        <!-- CTA unique -->
+        <button
+          class="cta-btn bg-accent text-bg text-base font-bold px-8 py-4 rounded hover:opacity-90 transition-opacity duration-200"
+          aria-haspopup="dialog"
+        >
+          Réserver un appel stratégique
+        </button>
+
+        <!-- Ligne de confiance -->
+        <p class="mt-5 text-muted text-sm font-normal">
+          47 agences accompagnées
+          <span class="mx-2 text-accent/50">·</span>
+          Résultats garantis sous 90 jours
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION RÉSULTATS & MÉTHODE
+    ============================================================ -->
+    <section id="methode" class="py-24 px-6 bg-gradient-to-b from-bg to-surface" data-fade-in>
+      <div class="max-w-6xl mx-auto">
+
+        <!-- En-tête de section -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-text mb-4">
+            Notre <span class="accent-serif">méthode</span> en 3 piliers
+          </h2>
+          <p class="text-muted text-lg max-w-xl mx-auto">
+            Un processus éprouvé pour transformer votre pipeline commercial.
+          </p>
+        </div>
+
+        <!-- Grille 3 piliers — Scrollytelling Reveal -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 relative">
+
+          <!-- Pilier 1 — Acquisition (VISIBLE DÈS LE DÉPART) -->
+          <div class="pilier-card bg-bg border border-white/10 rounded-xl p-8 flex flex-col h-full opacity-100" data-pilier="1">
+            <p class="text-accent text-xs font-medium tracking-widest uppercase mb-4">Pilier 01</p>
+            <h3 class="text-text text-xl font-bold mb-3">Acquisition</h3>
+            <p class="text-muted text-sm mb-6 leading-relaxed">
+              Attirer les bons décideurs au bon moment.
+            </p>
+            <img src="assets/acquisition-ui.png" alt="Acquisition" class="floating-element w-full h-32 object-cover rounded-md mb-4 border border-white/10">
+            <ul class="flex flex-col gap-3 mt-auto">
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Ciblage ICP précis par secteur et taille
+              </li>
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Campagnes outbound multicanal (LinkedIn + email)
+              </li>
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Content marketing orienté intention d'achat
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pilier 2 — Nurturing (APPARITION AU SCROLL) -->
+          <div class="pilier-card bg-bg border border-white/10 rounded-xl p-8 flex flex-col h-full opacity-0" data-pilier="2">
+            <p class="text-accent text-xs font-medium tracking-widest uppercase mb-4">Pilier 02</p>
+            <h3 class="text-text text-xl font-bold mb-3">Nurturing</h3>
+            <p class="text-muted text-sm mb-6 leading-relaxed">
+              Rester présent sans être intrusif.
+            </p>
+            <img src="assets/nurturing-ui.png" alt="Nurturing" class="floating-element w-full h-32 object-cover rounded-md mb-4 border border-white/10">
+            <ul class="flex flex-col gap-3 mt-auto">
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Séquences email comportementales
+              </li>
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Scoring de lead automatisé
+              </li>
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Retargeting segmenté par étape du funnel
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pilier 3 — Conversion (APPARITION AU SCROLL) -->
+          <div class="pilier-card bg-bg border border-white/10 rounded-xl p-8 flex flex-col h-full opacity-0" data-pilier="3">
+            <p class="text-accent text-xs font-medium tracking-widest uppercase mb-4">Pilier 03</p>
+            <h3 class="text-text text-xl font-bold mb-3">Conversion</h3>
+            <p class="text-muted text-sm mb-6 leading-relaxed">
+              Transformer l'intérêt en contrat signé.
+            </p>
+            <img src="assets/dashboard-ui.png" alt="Dashboard" class="floating-element w-full h-32 object-cover rounded-md mb-4 border border-white/10">
+            <ul class="flex flex-col gap-3 mt-auto">
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Scripts de qualification testés en B2B
+              </li>
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Pages de vente optimisées CRO
+              </li>
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <span class="text-accent mt-0.5 shrink-0">●</span>
+                Suivi post-appel structuré
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bande de chiffres clés — Premium Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 py-12 border-t border-b border-white/10">
+
+          <div class="text-center group">
+            <div class="mb-3 text-5xl font-bold text-accent">47</div>
+            <p class="text-muted text-sm font-medium">agences accompagnées</p>
+            <div class="mt-2 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"></div>
+          </div>
+
+          <div class="text-center group">
+            <div class="mb-3 text-5xl font-bold text-accent">+340%</div>
+            <p class="text-muted text-sm font-medium">leads qualifiés en moyenne</p>
+            <div class="mt-2 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"></div>
+          </div>
+
+          <div class="text-center group">
+            <div class="mb-3 text-5xl font-bold text-accent">92%</div>
+            <p class="text-muted text-sm font-medium">taux de satisfaction client</p>
+            <div class="mt-2 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"></div>
+          </div>
+
+        </div>
+
+        <!-- Repeat CTA -->
+        <div class="text-center">
+          <button
+            class="cta-btn bg-accent text-bg text-base font-bold px-8 py-4 rounded hover:opacity-90 transition-opacity duration-200"
+            aria-haspopup="dialog"
+          >
+            Réserver un appel stratégique
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION TÉMOIGNAGES
+    ============================================================ -->
+    <section id="temoignages" class="py-24 px-6 bg-bg overflow-hidden" data-fade-in>
+      <div class="max-w-6xl mx-auto">
+
+        <!-- En-tête -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-text mb-4">
+            Ce que disent nos <span class="accent-serif">clients</span>
+          </h2>
+          <p class="text-muted text-lg max-w-xl mx-auto">
+            Des résultats mesurables. Des retours directs.
+          </p>
+        </div>
+
+        <!-- Layout staggered : flex desktop, stack mobile -->
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+
+          <!-- Témoignage 1 — aligné haut -->
+          <div class="temoignage-card gsap-reveal w-full md:flex-1 bg-surface border border-white/10 rounded-xl p-8 hover:shadow-lg transition-all duration-200">
+            <!-- Étoiles -->
+            <div class="stars flex gap-1 mb-5" aria-label="5 étoiles sur 5">
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+            </div>
+            <!-- Citation -->
+            <blockquote class="text-text text-sm leading-relaxed mb-6">
+              "En 4 mois, on est passés de 12 à 53 leads qualifiés par mois.
+              Leur méthode a remplacé nos 2 commerciaux juniors."
+            </blockquote>
+            <!-- Auteur -->
+            <div class="flex items-center gap-3">
+              <div class="avatar w-12 h-12 rounded-full bg-white/8 flex items-center justify-center shrink-0 overflow-hidden">
+                <img src="assets/executive-1.png" alt="Marc Delaunay" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <p class="text-text text-sm font-medium">Marc Delaunay</p>
+                <p class="text-muted text-xs">Directeur associé · Meridian Studio — Lyon</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Témoignage 2 — décalé vers le bas en desktop -->
+          <div class="temoignage-card gsap-reveal w-full md:flex-1 md:mt-12 bg-surface border border-white/10 rounded-xl p-8 hover:shadow-lg transition-all duration-200">
+            <div class="stars flex gap-1 mb-5" aria-label="5 étoiles sur 5">
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+            </div>
+            <blockquote class="text-text text-sm leading-relaxed mb-6">
+              "On avait du trafic mais zéro conversion. Après 3 mois, notre
+              taux de prise de RDV a triplé. Zéro pub en plus."
+            </blockquote>
+            <div class="flex items-center gap-3">
+              <div class="avatar w-12 h-12 rounded-full bg-white/8 flex items-center justify-center shrink-0 overflow-hidden">
+                <img src="assets/executive-2.png" alt="Claire Fontaine" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <p class="text-text text-sm font-medium">Claire Fontaine</p>
+                <p class="text-muted text-xs">Co-fondatrice · Atelier Nord — Nantes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Témoignage 3 — aligné haut -->
+          <div class="temoignage-card gsap-reveal w-full md:flex-1 bg-surface border border-white/10 rounded-xl p-8 hover:shadow-lg transition-all duration-200">
+            <div class="stars flex gap-1 mb-5" aria-label="5 étoiles sur 5">
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+              <span class="star text-accent opacity-0 transition-opacity duration-300">★</span>
+            </div>
+            <blockquote class="text-text text-sm leading-relaxed mb-6">
+              "L'approche est sobre, pro, structurée. Pas de bullshit
+              growth-hack. Ils nous ont livré un système, pas des promesses."
+            </blockquote>
+            <div class="flex items-center gap-3">
+              <div class="avatar w-12 h-12 rounded-full bg-white/8 flex items-center justify-center shrink-0 overflow-hidden">
+                <img src="assets/executive-3.png" alt="Julien Bastide" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <p class="text-text text-sm font-medium">Julien Bastide</p>
+                <p class="text-muted text-xs">CEO · Cabinet Vélin — Paris</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ============================================================
+         SECTION FAQ
+    ============================================================ -->
+    <section id="faq" class="py-24 px-6 bg-gradient-to-b from-bg to-surface" data-fade-in>
+      <div class="max-w-2xl mx-auto">
+
+        <!-- En-tête -->
+        <div class="text-center mb-14">
+          <h2 class="text-3xl sm:text-4xl font-bold text-text mb-4">
+            Les <span class="accent-serif">questions</span> qu'on nous pose le plus
+          </h2>
+          <p class="text-muted text-lg max-w-lg mx-auto">
+            Si vous avez un doute, la réponse est probablement ici.
+          </p>
+        </div>
+
+        <!-- Accordion -->
+        <div id="faq-accordion" class="flex flex-col">
+
+          <!-- Q1 -->
+          <div class="faq-item border-b border-white/8">
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+              aria-expanded="false"
+            >
+              <span class="text-text text-sm sm:text-base font-medium">
+                Vous travaillez avec quel type d'agences ?
+              </span>
+              <span class="faq-chevron shrink-0 text-accent transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+              <p class="text-muted text-sm leading-relaxed pb-5">
+                Des agences marketing de 10 à 50 personnes, basées en France, avec un CA entre 500k€ et 5M€. Nous sommes spécialisés B2B — si vous vendez en B2C, nous ne sommes pas le bon partenaire.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item border-b border-white/8">
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+              aria-expanded="false"
+            >
+              <span class="text-text text-sm sm:text-base font-medium">
+                Combien de temps avant les premiers résultats ?
+              </span>
+              <span class="faq-chevron shrink-0 text-accent transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+              <p class="text-muted text-sm leading-relaxed pb-5">
+                Les premiers leads qualifiés arrivent entre la semaine 3 et la semaine 6. Les premières signatures entre le mois 2 et le mois 3. Nous garantissons un pipeline rempli sous 90 jours ou nous continuons gratuitement.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item border-b border-white/8">
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+              aria-expanded="false"
+            >
+              <span class="text-text text-sm sm:text-base font-medium">
+                Est-ce que ça marche pour les petites agences ?
+              </span>
+              <span class="faq-chevron shrink-0 text-accent transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+              <p class="text-muted text-sm leading-relaxed pb-5">
+                Oui, si vous avez au moins 2 personnes dédiées au commercial et une offre clairement positionnée. En dessous, mieux vaut consolider les fondations avant.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item border-b border-white/8">
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+              aria-expanded="false"
+            >
+              <span class="text-text text-sm sm:text-base font-medium">
+                Quel est le budget moyen ?
+              </span>
+              <span class="faq-chevron shrink-0 text-accent transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+              <p class="text-muted text-sm leading-relaxed pb-5">
+                Nos accompagnements démarrent à 4 500€/mois sur 6 mois minimum. Nous ne travaillons pas en prestation ponctuelle — uniquement en partenariat long-terme avec résultats chiffrés.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item border-b border-white/8">
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+              aria-expanded="false"
+            >
+              <span class="text-text text-sm sm:text-base font-medium">
+                On travaille déjà avec une autre solution — pourquoi changer ?
+              </span>
+              <span class="faq-chevron shrink-0 text-accent transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+              <p class="text-muted text-sm leading-relaxed pb-5">
+                Nous ne sommes pas une alternative. Nous sommes complémentaires à votre équipe existante. Nous prenons en charge la partie acquisition pendant que votre équipe se concentre sur le delivery client.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item border-b border-white/8">
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+              aria-expanded="false"
+            >
+              <span class="text-text text-sm sm:text-base font-medium">
+                Comment se passe le premier appel ?
+              </span>
+              <span class="faq-chevron shrink-0 text-accent transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+              <p class="text-muted text-sm leading-relaxed pb-5">
+                30 minutes en visio. On audite votre pipeline actuel, on identifie 2-3 leviers prioritaires, et on vous dit franchement si on peut vous aider ou pas. Aucun pitch commercial — juste un diagnostic.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Transition + CTA final -->
+        <div class="mt-14 text-center">
+          <p class="text-muted text-sm mb-6">
+            Toujours un doute ? Le plus simple : 30 minutes au téléphone.
+          </p>
+          <button
+            class="cta-btn bg-accent text-bg text-base font-bold px-8 py-4 rounded hover:opacity-90 transition-opacity duration-200"
+            aria-haspopup="dialog"
+          >
+            Réserver mon appel gratuit
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BANDE CTA FINALE
+    ============================================================ -->
+    <section class="py-24 px-6 bg-surface text-center">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-text mb-4">
+          Prêt à remplir votre pipeline ?
+        </h2>
+        <p class="text-muted text-lg mb-10">
+          30 minutes. Pas de pitch. Juste un diagnostic honnête.
+        </p>
+        <button
+          class="cta-btn bg-accent text-bg text-base font-bold px-8 py-4 rounded hover:opacity-90 transition-opacity duration-200"
+          aria-haspopup="dialog"
+        >
+          Réserver un appel stratégique
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" class="bg-bg border-t border-white/8">
+
+    <!-- Grille principale -->
+    <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-3 gap-10">
+
+      <!-- Gauche : Logo + baseline -->
+      <div>
+        <p class="text-text font-bold text-lg mb-3">Atelier Nord</p>
+        <p class="text-muted text-sm leading-relaxed">
+          Acquisition B2B pour agences marketing françaises.
+        </p>
+      </div>
+
+      <!-- Centre : Liens smooth scroll -->
+      <nav aria-label="Navigation secondaire" class="flex flex-col gap-3 sm:items-center">
+        <a href="#methode"     class="text-muted text-sm hover:text-text transition-colors duration-200">Méthode</a>
+        <a href="#temoignages" class="text-muted text-sm hover:text-text transition-colors duration-200">Témoignages</a>
+        <a href="#faq"         class="text-muted text-sm hover:text-text transition-colors duration-200">FAQ</a>
+      </nav>
+
+      <!-- Droite : Mentions -->
+      <div class="sm:text-right">
+        <p class="text-muted text-sm leading-relaxed">
+          Atelier Nord · Paris, France<br>
+          SIRET 000 000 000 00000
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Ligne bottom -->
+    <div class="border-t border-white/8">
+      <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-muted text-xs">
+          © 2026 Atelier Nord. Tous droits réservés.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-muted text-xs hover:text-text transition-colors duration-200">Mentions légales</a>
+          <span class="text-white/20">·</span>
+          <a href="#" class="text-muted text-xs hover:text-text transition-colors duration-200">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- ============================================================
+       MODAL CTA
+  ============================================================ -->
+  <div
+    id="modal-overlay"
+    class="modal-overlay fixed inset-0 z-50 flex items-center justify-center px-4 opacity-0 pointer-events-none"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="absolute inset-0 bg-black/70"></div>
+
+    <!-- Card -->
+    <div class="modal-card relative z-10 bg-surface rounded-xl w-full max-w-md p-8 shadow-2xl">
+
+      <!-- Close button -->
+      <button
+        id="modal-close"
+        class="absolute top-4 right-4 text-muted hover:text-text transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+        aria-label="Fermer la fenêtre"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Modal header -->
+      <h2 id="modal-title" class="text-text text-xl font-bold mb-1">
+        Réservez votre appel stratégique
+      </h2>
+      <p class="text-muted text-sm mb-6">
+        Un consultant vous rappelle sous 24h ouvrées.
+      </p>
+
+      <!-- Form -->
+      <form id="modal-form" novalidate>
+
+        <div class="flex flex-col gap-5">
+
+          <!-- Champ Nom -->
+          <div>
+            <label for="field-nom" class="block text-text text-sm font-medium mb-1.5">
+              Votre nom complet
+            </label>
+            <input
+              type="text"
+              id="field-nom"
+              name="nom"
+              autocomplete="name"
+              required
+              placeholder="Sophie Martin"
+              class="form-input w-full bg-bg border border-white/10 rounded-lg px-4 py-3 text-text text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+            />
+          </div>
+
+          <!-- Champ Email -->
+          <div>
+            <label for="field-email" class="block text-text text-sm font-medium mb-1.5">
+              Email professionnel
+            </label>
+            <input
+              type="email"
+              id="field-email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="sophie@votre-agence.fr"
+              class="form-input w-full bg-bg border border-white/10 rounded-lg px-4 py-3 text-text text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+            />
+          </div>
+
+          <!-- Champ Agence -->
+          <div>
+            <label for="field-agence" class="block text-text text-sm font-medium mb-1.5">
+              Nom de votre agence
+            </label>
+            <input
+              type="text"
+              id="field-agence"
+              name="agence"
+              autocomplete="organization"
+              required
+              placeholder="Votre Agence SAS"
+              class="form-input w-full bg-bg border border-white/10 rounded-lg px-4 py-3 text-text text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+            />
+          </div>
+
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="mt-6 w-full bg-accent text-bg text-sm font-bold py-3.5 rounded-lg hover:opacity-90 transition-opacity duration-200"
+        >
+          Je réserve mon appel
+        </button>
+
+        <!-- RGPD -->
+        <p class="mt-4 text-muted text-xs text-center leading-relaxed">
+          Vos données sont utilisées uniquement pour vous recontacter.<br>
+          Conformément au RGPD.
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Sticky CTA (Godly) -->
+  <button id="sticky-cta" class="fixed bottom-6 right-6 z-40 bg-accent text-bg text-sm font-bold px-6 py-3 rounded-full shadow-lg opacity-0 pointer-events-none" aria-haspopup="dialog">
+    Réserver mon appel
+  </button>
+
+  <!-- Immersion moteur : Lenis + GSAP -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- JS personnalisé -->
+  <script src="js/main.js"></script>
+</body>
+</html>

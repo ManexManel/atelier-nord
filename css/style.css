@@ -1,0 +1,462 @@
+/* ============================================================
+   VARIABLES CSS
+============================================================ */
+:root {
+  --color-bg:        #030303;
+  --color-surface:   #141414;
+  --color-text:      #F5F5F5;
+  --color-muted:     #A0A0A0;
+  --color-accent:    #C9A961;
+  --font-headline:   'Inter', sans-serif;
+  --font-accent:     'Playfair Display', serif;
+  --font-data:       'JetBrains Mono', monospace;
+  --font-base:       'Inter', sans-serif;
+  --transition-base: 200ms ease;
+  --radius-card:     12px;
+}
+
+/* ============================================================
+   BASE
+============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* compense la nav fixe h-16 (64px) + marge */
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* ============================================================
+   TYPOGRAPHY — Elite Hierarchy (Swiss Precision)
+============================================================ */
+h1, h2 {
+  font-family: var(--font-headline);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+#hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  word-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.1;
+}
+
+/* ============================================================
+   HERO H1 — Serif Italic Gold Accents (Link&Grow Style)
+============================================================ */
+.serif-italic-gold {
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  color: #C9A961 !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+/* Accents en Playfair (Luxe) */
+.accent-serif {
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* Data labels en JetBrains Mono */
+.data-label {
+  font-family: var(--font-data);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+}
+
+/* ============================================================
+   GRID BACKGROUND — Pattern animé data-driven
+============================================================ */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(201, 169, 97, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 169, 97, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ============================================================
+   BACKGROUND GLOW SPHERES — Vantablack + Gold (Luxury Float)
+============================================================ */
+.bg-glow-sphere {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 169, 97, 0.08), transparent);
+  filter: blur(120px);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+  will-change: transform;
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+.nav-header {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--transition-base),
+              border-color var(--transition-base),
+              backdrop-filter var(--transition-base);
+}
+
+/* État scrollé — ajouté par JS */
+.nav-header.nav-scrolled {
+  background-color: rgba(3, 3, 3, 0.9);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================================
+   BURGER MENU
+============================================================ */
+.burger-bar {
+  transform-origin: center;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+/* État ouvert */
+#burger-btn[aria-expanded="true"] .burger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#burger-btn[aria-expanded="true"] .burger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+#burger-btn[aria-expanded="true"] .burger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ============================================================
+   MOBILE NAV
+============================================================ */
+.mobile-nav {
+  transition: opacity 200ms ease;
+}
+
+.mobile-nav.nav-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================================================
+   MODAL
+============================================================ */
+.modal-overlay {
+  transition: opacity 200ms ease;
+}
+
+.modal-overlay.modal-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  transform: translateY(8px);
+  transition: transform 200ms ease;
+}
+
+.modal-overlay.modal-open .modal-card {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   HERO — glow radial premium (Godly effect)
+============================================================ */
+.hero-halo {
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      rgba(201, 169, 97, 0.12) 0%,
+      rgba(201, 169, 97, 0.04) 40%,
+      rgba(201, 169, 97, 0) 70%
+    ),
+    radial-gradient(
+      ellipse 120% 100% at 50% 50%,
+      rgba(201, 169, 97, 0.02) 0%,
+      transparent 60%
+    );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-halo {
+    animation: halo-pulse 8s ease-in-out infinite;
+  }
+}
+
+@keyframes halo-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+
+/* ============================================================
+   TÉMOIGNAGES — Glassmorphism + Rotate (React Stagger Style)
+============================================================ */
+.temoignage-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(201, 169, 97, 0.15);
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(20, 20, 20, 0.75) 100%);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Rotate aléatoire sur chaque carte */
+.temoignage-card:nth-child(1) {
+  transform: rotate(-1.2deg);
+}
+
+.temoignage-card:nth-child(2) {
+  transform: rotate(0deg);
+}
+
+.temoignage-card:nth-child(3) {
+  transform: rotate(1.2deg);
+}
+
+.temoignage-card:hover {
+  transform: translateY(-10px) scale(1.02) rotate(0deg);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(201, 169, 97, 0.25),
+    0 0 35px rgba(201, 169, 97, 0.15);
+  border-color: rgba(201, 169, 97, 0.6);
+  background: linear-gradient(135deg, rgba(25, 25, 25, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+}
+
+.avatar {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================================
+   FLOATING ELEMENTS — respiration continue (Framer animate: y)
+============================================================ */
+@keyframes float-smooth {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.floating-element {
+  animation: float-smooth 6s ease-in-out infinite;
+}
+
+/* ============================================================
+   BACKGROUND GLOW — float animation (Framer @keyframes)
+============================================================ */
+.background-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201, 169, 97, 0.15), transparent);
+  filter: blur(120px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes glow-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-40px); }
+}
+
+.background-glow {
+  animation: glow-float 8s ease-in-out infinite;
+}
+
+/* ============================================================
+   PILIERS — Hover Extrême (Godly) avec Glow Premium
+============================================================ */
+.pilier-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-color: rgba(201, 169, 97, 0.1);
+  background: linear-gradient(135deg, #0F0F0F 0%, #141414 100%);
+  position: relative;
+}
+
+/* État initial pour Pilier 2 et 3 — offset Y pour scrollytelling */
+[data-pilier="2"],
+[data-pilier="3"] {
+  transform: translateY(50px);
+}
+
+.pilier-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(201, 169, 97, 0.2),
+    0 0 30px rgba(201, 169, 97, 0.1);
+  border-color: rgba(201, 169, 97, 0.5);
+  background: linear-gradient(135deg, #141414 0%, #0F0F0F 100%);
+}
+
+/* ============================================================
+   FORM INPUTS — état focus accent
+============================================================ */
+.form-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
+}
+
+/* ============================================================
+   CTA BUTTON — Magnetic Glow + Shimmer (Godly/Awwwards)
+============================================================ */
+.cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+}
+
+.cta-btn:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 15px 40px rgba(201, 169, 97, 0.4), 0 0 25px rgba(201, 169, 97, 0.15);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cta-btn::after {
+    animation: shimmer-loop 4s infinite;
+  }
+
+  .cta-btn:hover::after {
+    animation: shimmer-loop 0.6s ease-in-out;
+  }
+}
+
+@keyframes shimmer-loop {
+  0% { left: -100%; }
+  100% { left: 160%; }
+}
+
+.cta-btn:active {
+  transform: scale(0.95);
+}
+
+.faq-trigger:active {
+  opacity: 0.7;
+}
+
+.nav-link:active,
+.mobile-nav-link:active {
+  opacity: 0.7;
+}
+
+/* ============================================================
+   STICKY CTA — Godly Float
+============================================================ */
+#sticky-cta {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#sticky-cta:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 15px 40px rgba(201, 169, 97, 0.35), 0 0 20px rgba(201, 169, 97, 0.15);
+}
+
+#sticky-cta:active {
+  transform: scale(0.96);
+}
+
+/* ============================================================
+   SECTION DIVIDERS — Premium line system
+============================================================ */
+section {
+  position: relative;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 169, 97, 0.2) 25%,
+    rgba(201, 169, 97, 0.2) 75%,
+    transparent
+  );
+}
+
+/* ============================================================
+   SPLIT TEXT — Reveal with 3D Rotation (Elite Hero)
+============================================================ */
+#hero h1 {
+  perspective: 1000px;
+}
+
+.split-word {
+  display: inline-block;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* ============================================================
+   RESPONSIVE — body text minimum 16px mobile
+============================================================ */
+@media (max-width: 640px) {
+  .temoignage-card blockquote,
+  .faq-answer p,
+  .pilier-card li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
