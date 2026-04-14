@@ -1,0 +1,62 @@
+================================================================================
+COMMANDES GIT POUR FIX OG-IMAGE
+================================================================================
+
+Exécutez ces commandes dans votre terminal (PowerShell, Git Bash, ou CMD):
+
+ÉTAPE 1: Vérifier le statut
+    cd C:\Users\HP\landing-agence
+    git status
+
+ÉTAPE 2: Ajouter les changements
+    git add .
+
+ÉTAPE 3: Faire un commit
+    git commit -m "fix: og-image URLs absolues Vercel pour preview sociaux"
+
+ÉTAPE 4: Pousser vers GitHub
+    git push origin main
+
+================================================================================
+SI VOUS N'AVEZ PAS ENCORE INITIALISÉ GIT:
+================================================================================
+
+1. Initialiser Git:
+    git init
+
+2. Ajouter remote (remplacer YOUR_USERNAME):
+    git remote add origin https://github.com/YOUR_USERNAME/atelier-nord.git
+
+3. Premiere branche:
+    git branch -M main
+
+4. Ajouter et commiter:
+    git add .
+    git commit -m "init: Atelier Nord v1"
+
+5. Pousser:
+    git push -u origin main
+
+================================================================================
+CHANGEMENTS EFFECTUÉS:
+================================================================================
+
+✅ index.html:
+   - og:url → https://atelier-nord.vercel.app/
+   - og:image → https://atelier-nord.vercel.app/assets/og-image.svg
+   - twitter:image → https://atelier-nord.vercel.app/assets/og-image.svg
+   - Toutes URLs absolues (Vercel)
+
+Fichier modifié:
+   - index.html (lignes 18, 21, 31)
+
+================================================================================
+APRÈS LE PUSH:
+================================================================================
+
+1. Attendre 1-2 minutes que Vercel se redéploie automatiquement
+2. Aller sur https://metatags.io
+3. Coller: https://metatags.io?url=https://atelier-nord.vercel.app
+4. Vérifier que og-image.svg s'affiche dans les previews
+
+================================================================================
